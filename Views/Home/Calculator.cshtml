@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Assignment 2";
+    ViewBag.Header = "See What Your Grade Is";
+}
+
+@model SpencersFirstASPNETWebApp__Assignment_1_.Models.CalculatorModel
+
+<body>
+    <h2>Grade Calculator</h2>
+    <p>Enter in the percent grade you got in each category.</p>
+    <br />
+
+    <form method="post">
+        <label>Assignments:</label>
+        <input id="assignments" asp-for="assignments" maxlength="3" />
+        <br />
+        <label>Group Project:</label>
+        <input id="groupproject" asp-for="groupproject" maxlength="3" />
+        <br />
+        <label>Quizzes:</label>
+        <input id="quizzes" asp-for="quizzes" maxlengthx="3" />
+        <br />
+        <label>Exams:</label>
+        <input id="exams" asp-for="exams" maxlength="3" />
+        <br />
+        <label>INTEX:</label>
+        <input id="intex" asp-for="intex" maxlength="3" />
+        <br />
+        <br />
+        <input type="submit" value="Submit Scores" id="submitButton" />
+        <br /><br />
+        <div asp-validation-summary="All"></div>
+    </form>
+</body>

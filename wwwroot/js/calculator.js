@@ -1,9 +1,6 @@
-﻿var submit = document.getElementById("submitButton");
-
-
-submit.addEventListener("click", function () {
-    totalscore = ((document.getElementById("assignments").value * 0.5) + (document.getElementById("groupproject").value * 0.1) + (document.getElementById("quizzes").value * 0.1) +
-        (document.getElementById("exams").value * 0.2) + (document.getElementById("intex").value * 0.1))
+﻿$("#submitButton").click ( function () {
+    totalscore = (($("#assignments").value * 0.5) + ($("#groupproject").value * 0.1) + ($("#quizzes").value * 0.1) +
+        ($("#exams").value * 0.2) + ($("#intex").value * 0.1))
 
     if (totalscore >= 94) {
         finalgrade = "A"
@@ -32,7 +29,7 @@ submit.addEventListener("click", function () {
         finalgrade = "E"
         
 
-    alert("Total Score = " + ((document.getElementById("assignments").value * 0.5) + (document.getElementById("groupproject").value * 0.1) + (document.getElementById("quizzes").value * 0.1) +
-        (document.getElementById("exams").value * 0.2) + (document.getElementById("intex").value * 0.1)) +
+    alert("Total Score = " + (($("#assignments").value * 0.5) + ($("#groupproject").value * 0.1) + ($("#quizzes").value * 0.1) +
+        ($("#exams").value * 0.2) + ($("#intex").value * 0.1)) +
         "\nFinal Grade = " + finalgrade)
 });

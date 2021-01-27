@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Assignment 2
+        Description: converting the app we made in assignment 1 to an MVC structure
+        Spencer Wright, group 3-1
+    -->
+
+    <title>@ViewBag.Title</title>
+    <!--links the styling sheet to this file-->
+    <link href="~/css/main.css" rel="stylesheet" />
+    <!--link below is for favicon-->
+    <link rel="icon" href="https://www.additioapp.com/wp-content/uploads/2017/04/cropped-favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+    <header>
+        <h1>@ViewBag.Header</h1>
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Calculator">Grade Calculator</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    @RenderBody()
+
+    <footer>Spencer Wright | Assignment 2</footer>
+
+    <!--loads the jquery-->
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <!--links the js file to this page-->
+    <script src="~/js/calculator.js"></script>
+</body>
+
+</html>
